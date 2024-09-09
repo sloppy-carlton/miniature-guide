@@ -3,10 +3,8 @@
 echo "Now configuring your Arch system."
 ln -sf /usr/share/zoneinfo/America/Chicago /etc/localtime
 hwclock
-pacman -Syu systemd intel-ucode sof-firmware networkmanager wpa_supplicant nano man-db man-pages texinfo bluez bluez-utils reflector sudo alsa-utils pulseaudio pulseaudio-bluetooth pulseaudio-alsa pulseaudio-equalizer
-systemctl enable --now bluetooth
-systemctl enable --now alsa-restore
-systemctl enable --now alsa-state
+pacman -Syu intel-ucode sof-firmware networkmanager wpa_supplicant nano man-db man-pages texinfo bluez bluez-utils reflector sudo alsa alsa-utils pulseaudio pulseaudio-bluetooth pulseaudio-alsa pulseaudio-equalizer
+systemctl enable --now alsa-restore alsa-state bluetooth
 amixer sset Master unmute
 amixer sset Speaker unmute
 amixer sset Headphone unmute
@@ -18,8 +16,7 @@ else
 	echo "No Broadcom drivers needed"
 fi
 echo "Which Desktop Environment would you like to install?"
-select opt in Xfce MATE Cinnamon Budgie KDE none;
-	do
+select opt in Xfce MATE Cinnamon Budgie KDE none; do
 	case $opt in
 		Xfce)
 			pacman -Syu xfce4 xfce4-goodies network-manager-applet xfce4-pulseaudio-plugin lightdm lightdm-slick-greeter
@@ -49,12 +46,12 @@ select opt in Xfce MATE Cinnamon Budgie KDE none;
 			;;
 	esac
 done
-pacman -Syu rust git
 useradd -m -G wheel -s bash pmckenna
 passwd pmckenna
 echo "visudo will open soon. Please add the following line if it does not already exist (no quotes): '%wheel      ALL=(ALL:ALL) ALL' "
 EDITOR=nano visudo
 systemctl enable NetworkManager
+pacman -Syu rust git
 su pmckenna -c cat <<-EOF
 	$(git clone https://aur.archlinux.org/paru.git)
 	$(cd paru)

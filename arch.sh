@@ -3,7 +3,7 @@
 echo "Now configuring your Arch system."
 ln -sf /usr/share/zoneinfo/America/Chicago /etc/localtime
 hwclock
-pacman -Syu intel-ucode sof-firmware networkmanager wpa_supplicant nano man-db man-pages texinfo bluez bluez-utils reflector sudo alsa-utils pulseaudio pulseaudio-bluetooth pulseaudio-alsa pulseaudio-equalizer
+pacman -Syu systemd intel-ucode sof-firmware networkmanager wpa_supplicant nano man-db man-pages texinfo bluez bluez-utils reflector sudo alsa-utils pulseaudio pulseaudio-bluetooth pulseaudio-alsa pulseaudio-equalizer
 systemctl enable --now bluetooth
 systemctl enable --now alsa-restore
 systemctl enable --now alsa-state

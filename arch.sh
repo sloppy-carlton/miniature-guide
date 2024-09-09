@@ -3,7 +3,7 @@
 echo "Now configuring your Arch system."
 ln -sf /usr/share/zoneinfo/America/Chicago /etc/localtime
 hwclock
-pacman -Syu intel-ucode sof-firmware networkmanager wpa_supplicant nano man-db man-pages texinfo bluez bluez-utils reflector sudo alsa-utils pulseaudio pulseaudio-bluetooth pulseaudio-alsa pulseaudio-equalizer git
+pacman -Syu intel-ucode sof-firmware networkmanager wpa_supplicant nano man-db man-pages texinfo bluez bluez-utils reflector sudo alsa-utils pulseaudio pulseaudio-bluetooth pulseaudio-alsa pulseaudio-equalizer
 systemctl enable --now alsa-restore alsa-state bluetooth
 amixer sset Master unmute
 amixer sset Speaker unmute
@@ -47,7 +47,7 @@ select opt in Xfce MATE Cinnamon Budgie KDE none;
 			;;
 	esac
 done
-pacman -Syu rust
+pacman -Syu rust git
 useradd -m -G wheel -s bash pmckenna
 passwd pmckenna
 echo "visudo will open soon. Please add the following line if it does not already exist (no quotes): '%wheel      ALL=(ALL:ALL) ALL' "

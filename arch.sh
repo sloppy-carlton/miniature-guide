@@ -4,7 +4,7 @@ echo "Now configuring your Arch system."
 ln -sf /usr/share/zoneinfo/America/Chicago /etc/localtime
 hwclock
 pacman -Syu intel-ucode sof-firmware networkmanager wpa_supplicant nano man-db man-pages texinfo bluez bluez-utils reflector sudo alsa alsa-utils pulseaudio pulseaudio-bluetooth pulseaudio-alsa pulseaudio-equalizer git rust
-systemctl enable --now reflector alsa-restore alsa-state bluetooth systemd-ukify systemd-stub
+systemctl enable --now reflector alsa-restore alsa-state bluetooth
 amixer sset Master unmute
 amixer sset Speaker unmute
 amixer sset Headphone unmute

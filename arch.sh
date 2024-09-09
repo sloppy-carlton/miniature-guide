@@ -16,7 +16,8 @@ else
 	echo "No Broadcom drivers needed"
 fi
 echo "Which Desktop Environment would you like to install?"
-select opt in Xfce MATE Cinnamon Budgie KDE none; do
+select opt in Xfce MATE Cinnamon Budgie KDE none;
+	do
 	case $opt in
 		Xfce)
 			pacman -Syu xfce4 xfce4-goodies network-manager-applet xfce4-pulseaudio-plugin lightdm lightdm-slick-greeter

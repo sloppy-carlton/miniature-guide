@@ -1,0 +1,1 @@
+//10.0.0.4/home /mnt/nas cifs credentials=/etc/.nascredentials,vers=3.0,uid=1000,rw,exec,_netdev,x-systemd.automount 0 0

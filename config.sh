@@ -1,3 +1,5 @@
+#!/bin/bash
+
 cat <<-ENDRC > ~/.bashrc
 	#
 	# ~/.bashrc

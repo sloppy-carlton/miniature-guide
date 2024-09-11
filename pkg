@@ -1,1 +1,3 @@
-picom-ft-udev findex-bin eww goober eww-systemd i3lock-color skippy-xd-git catppuccin-cursors-mocha catppuccin-cursors-frappe rose-pine-cursor rose-pine-gtk-theme-full catppuccin-gtk-theme-mocha catppuccin-gtk-theme-frappe ttf-apple-fonts ttf-sudo
+#!/bin/bash
+
+yay picom-ft-udev findex-bin eww goober eww-systemd i3lock-color skippy-xd-git catppuccin-cursors-mocha catppuccin-cursors-frappe rose-pine-cursor rose-pine-gtk-theme-full catppuccin-gtk-theme-mocha catppuccin-gtk-theme-frappe ttf-apple-fonts ttf-sudo

@@ -4,7 +4,7 @@
 curl -fsSL https://pkgs.tailscale.com/stable/ubuntu/noble.noarmor.gpg | sudo tee /usr/share/keyrings/tailscale-archive-keyring.gpg >/dev/null
 curl -fsSL https://pkgs.tailscale.com/stable/ubuntu/noble.tailscale-keyring.list | sudo tee /etc/apt/sources.list.d/tailscale.list
 sudo apt-get update
-sudo apt-get install tailscale cifs-utils
+sudo apt-get install -y tailscale cifs-utils
 sudo tailscale login
 
 curl -fsSL https://raw.githubusercontent.com/sloppy-carlton/miniature-guide/refs/heads/main/tailscale/tailscale.service | sudo tee /etc/systemd/system/tailscale.service > /dev/null
